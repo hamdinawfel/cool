@@ -14,7 +14,7 @@ export default function HeaderTabs() {
         setActiveTab={setActiveTab}
       />
       <HeaderButton
-        text='Pockup'
+        text='Pickup'
         btnColor='#fff'
         textColor='#000'
         activeTab={activeTab}
