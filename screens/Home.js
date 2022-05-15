@@ -11,6 +11,9 @@ import HeaderTabs from "../components/HeaderTabs";
 import SearchBar from "../components/SearchBar";
 import Categories from "../components/Categories";
 import RestaurantItems from "../components/RestaurantItems";
+import BottomTabs from "../components/BottomTabs";
+// import { Divider } from "@rneui/themed";
+
 import { YELP_API_KEY } from "react-native-dotenv";
 
 const localRestaurants = [
@@ -72,6 +75,8 @@ export default function Home() {
         <Categories />
         <RestaurantItems restaurantsData={restaurantsData} />
       </ScrollView>
+      {/* <Divider width={5} /> */}
+      <BottomTabs />
     </SafeAreaView>
   );
 }
