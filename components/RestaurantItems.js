@@ -10,7 +10,7 @@ export default function RestaurantItems(props) {
           <TouchableOpacity
             key={index}
             activeOpacity={1}
-            style={{ marginBottom: 30 }}>
+            style={{ marginBottom: 0 }}>
             <View
               style={{ padding: 15, backgroundColor: "#fff", marginTop: 10 }}>
               <View style={{ position: "relative" }}>
