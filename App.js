@@ -1,15 +1,11 @@
-import { StyleSheet, SafeAreaView } from "react-native";
-import Home from "./screens/Home";
+import { View } from "react-native";
+import Home from "./screens/home/Index";
+import RestaurantDtail from "./screens/restaurantDtail/Index";
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Home />
-    </SafeAreaView>
+    <View>
+      {/* <Home /> */}
+      <RestaurantDtail />
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});

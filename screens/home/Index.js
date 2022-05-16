@@ -7,12 +7,12 @@ import {
   View,
   ScrollView,
 } from "react-native";
-import HeaderTabs from "../components/HeaderTabs";
-import SearchBar from "../components/SearchBar";
-import Categories from "../components/Categories";
-import RestaurantItems from "../components/RestaurantItems";
-import BottomTabs from "../components/BottomTabs";
-// import { Divider } from "@rneui/themed";
+import HeaderTabs from "./components/HeaderTabs";
+import SearchBar from "./components/SearchBar";
+import Categories from "./components/Categories";
+import RestaurantItems from "./components/RestaurantItems";
+import BottomTabs from "./components/BottomTabs";
+// import { Divider } from "react-native-elements";
 
 import { YELP_API_KEY } from "react-native-dotenv";
 
@@ -75,7 +75,7 @@ export default function Home() {
         <Categories />
         <RestaurantItems restaurantsData={restaurantsData} />
       </ScrollView>
-      {/* <Divider width={5} /> */}
+      {/* <Divider width={1} /> */}
       <BottomTabs />
     </SafeAreaView>
   );
