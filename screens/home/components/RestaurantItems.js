@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import AntDesign from "react-native-vector-icons/AntDesign";
 
-export default function RestaurantItems(props) {
+export default function RestaurantItems({ navigation, ...props }) {
   return (
     <>
       {props.restaurantsData !== undefined &&
@@ -10,7 +10,17 @@ export default function RestaurantItems(props) {
           <TouchableOpacity
             key={index}
             activeOpacity={1}
-            style={{ marginBottom: 0 }}>
+            style={{ marginBottom: 0 }}
+            onPress={() =>
+              navigation.navigate("Detail", {
+                name: restaurant.name,
+                image: restaurant.image_url,
+                price: restaurant.price,
+                reviews: restaurant.review_count,
+                rating: restaurant.rating,
+                categories: restaurant.categories,
+              })
+            }>
             <View
               style={{ padding: 15, backgroundColor: "#fff", marginTop: 10 }}>
               <View style={{ position: "relative" }}>

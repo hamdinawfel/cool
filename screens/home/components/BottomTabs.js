@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
-export default function BottomTabs() {
+export default function BottomTabs({ navigation }) {
   return (
     <View
       style={{
@@ -10,7 +10,8 @@ export default function BottomTabs() {
         margin: 10,
         marginHorizontal: 30,
         justifyContent: "space-between",
-      }}>
+      }}
+      onPress={() => navigation.navigate("Profile", { name: "Jane" })}>
       <Icon icon='home' text='Home' />
       <Icon icon='search' text='Browse' />
       <Icon icon='shopping-bag' text='Grocery' />

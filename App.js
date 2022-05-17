@@ -1,11 +1,6 @@
-import { View } from "react-native";
-import Home from "./screens/home/Index";
-import RestaurantDtail from "./screens/restaurantDtail/Index";
+import * as React from "react";
+import RootNavigation from "./navigation";
+
 export default function App() {
-  return (
-    <View>
-      {/* <Home /> */}
-      <RestaurantDtail />
-    </View>
-  );
+  return <RootNavigation />;
 }

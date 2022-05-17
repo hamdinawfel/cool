@@ -12,7 +12,7 @@ import SearchBar from "./components/SearchBar";
 import Categories from "./components/Categories";
 import RestaurantItems from "./components/RestaurantItems";
 import BottomTabs from "./components/BottomTabs";
-// import { Divider } from "react-native-elements";
+import { Divider } from "@rneui/themed";
 
 import { YELP_API_KEY } from "react-native-dotenv";
 
@@ -37,7 +37,7 @@ const localRestaurants = [
   },
 ];
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [restaurantsData, setRestaurantData] = useState(localRestaurants);
   const [location, setLocation] = useState("New York");
   const [activeTab, setActiveTab] = useState("Delivery");
@@ -73,9 +73,12 @@ export default function Home() {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItems restaurantsData={restaurantsData} />
+        <RestaurantItems
+          navigation={navigation}
+          restaurantsData={restaurantsData}
+        />
       </ScrollView>
-      {/* <Divider width={1} /> */}
+      <Divider width={1} />
       <BottomTabs />
     </SafeAreaView>
   );
