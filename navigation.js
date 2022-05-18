@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "./screens/home/Index";
 import Detail from "./screens/detail/Index";
+import Success from "./screens/success/Index";
 
 export default function RootNavigation() {
   const Stack = createNativeStackNavigator();
@@ -18,6 +19,7 @@ export default function RootNavigation() {
         <Stack.Navigator initialRouteName='Home' screenOptions={screenOptions}>
           <Stack.Screen name='Home' component={Home} />
           <Stack.Screen name='Detail' component={Detail} />
+          <Stack.Screen name='Success' component={Success} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
