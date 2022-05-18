@@ -9,16 +9,15 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      console.log(action.payload);
       if (action.payload.checkboxValue) {
-        console.log("ADD TO CART");
+        // console.log("ADD TO CART");
 
         state.selectedItems = {
           items: [...state.selectedItems.items, action.payload.item],
           restaurantName: action.payload.restaurantName,
         };
       } else {
-        console.log("REMOVE FROM CART");
+        // console.log("REMOVE FROM CART");
         state.selectedItems = {
           items: [
             ...state.selectedItems.items.filter(
